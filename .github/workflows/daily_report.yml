@@ -1,0 +1,53 @@
+name: 每日 AI 日报
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 配置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 运行日报脚本
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          TO_EMAIL: ${{ secrets.TO_EMAIL }}
+          WECOM_WEBHOOK_URL: ${{ secrets.WECOM_WEBHOOK_URL }}
+          PAGES_URL: ${{ secrets.PAGES_URL }}
+        run: python daily_report.py
+
+      - name: 部署到 GitHub Pages
+        run: |
+          git config user.name "AI Daily Bot"
+          git config user.email "bot@example.com"
+          git add docs/
+          git diff --cached --quiet || git commit -m "日报更新: $(date +%Y-%m-%d)"
+          git push
+
+      - name: 归档日报
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-report-${{ github.run_number }}
+          path: docs/
+          retention-days: 30
