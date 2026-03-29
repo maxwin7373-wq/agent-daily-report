@@ -2,50 +2,55 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
 <title>AI 日报 · 2026年03月29日</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC',sans-serif;background:#f5f5f4;color:#1c1917;line-height:1.6;-webkit-font-smoothing:antialiased}
-.container{max-width:640px;margin:0 auto;padding:16px}
-.header{padding:20px 0 16px}
-.date{font-size:12px;color:#a8a29e;letter-spacing:.5px}
-h1{font-size:22px;font-weight:600;margin:4px 0}
-.headline{font-size:15px;color:#78716c;margin:6px 0 0;padding:10px 14px;background:#fef3c7;border-radius:10px;color:#92400e;font-weight:500}
-.section{margin:24px 0 0}
-.section-title{font-size:16px;font-weight:600;margin:0 0 12px;display:flex;align-items:center;gap:8px}
-.section-icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff}
-.card{display:block;background:#fff;border:1px solid #e7e5e4;border-radius:12px;padding:14px 16px;margin:0 0 10px;text-decoration:none;color:inherit;transition:border-color .15s}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans SC','PingFang SC','Hiragino Sans GB',sans-serif;background:#fafaf9;color:#1c1917;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+.container{max-width:640px;margin:0 auto;padding:12px 16px}
+.header{padding:16px 0 12px}
+.date{font-size:11px;color:#a8a29e;letter-spacing:.5px}
+h1{font-size:20px;font-weight:600;margin:2px 0}
+.headline{font-size:14px;padding:8px 12px;background:#fef3c7;border-radius:8px;color:#92400e;font-weight:500;margin:8px 0 0}
+.section{margin:20px 0 0}
+.st{font-size:15px;font-weight:600;margin:0 0 8px;display:flex;align-items:center;gap:6px}
+.si{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;flex-shrink:0}
+.card{display:block;background:#fff;border:1px solid #e7e5e4;border-radius:10px;padding:12px 14px;margin:0 0 8px;text-decoration:none;color:inherit;transition:border-color .15s}
 .card:hover{border-color:#a8a29e}
-.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-.card-title{font-size:14px;font-weight:600;color:#1c1917}
-.badge{font-size:11px;padding:2px 8px;border-radius:6px;white-space:nowrap;font-weight:500}
-.card-desc{font-size:13px;color:#57534e;margin:8px 0;line-height:1.7}
-.card-source{font-size:11px;color:#a8a29e}
-.card-meta{display:flex;gap:16px;font-size:12px;color:#a8a29e;margin:8px 0 0}
-.card-meta b{color:#78716c;font-weight:600}
-.voice-who{font-size:14px;font-weight:600;color:#7c3aed;margin:0 0 4px}
-.paper-why{font-size:12px;color:#0369a1;background:#e0f2fe;padding:6px 10px;border-radius:6px;margin:8px 0 0}
-.tags{display:flex;flex-wrap:wrap;gap:4px;margin:8px 0 0}
-.tag{font-size:11px;padding:2px 8px;border-radius:6px;background:#f5f5f4;color:#78716c}
+.ch{display:flex;justify-content:space-between;align-items:flex-start;gap:6px}
+.ct{font-size:14px;font-weight:600;color:#1c1917;line-height:1.4}
+.badge{font-size:10px;padding:2px 6px;border-radius:4px;white-space:nowrap;font-weight:500;flex-shrink:0}
+.imp-high{background:#fee2e2;color:#dc2626}
+.imp-med{background:#fef3c7;color:#d97706}
+.imp-new{background:#dcfce7;color:#166534}
+.cd{font-size:13px;color:#44403c;margin:6px 0;line-height:1.7}
+.cs{font-size:11px;color:#a8a29e}
+.link-hint{color:#2563eb}
+.cm{display:flex;gap:12px;font-size:12px;color:#a8a29e;margin:6px 0 0}
+.voice-who{font-size:13px;font-weight:600;color:#7c3aed}
+.paper-title{font-size:12px;font-weight:500;color:#78716c;line-height:1.4}
+.paper-why{font-size:12px;color:#0369a1;background:#e0f2fe;padding:5px 8px;border-radius:5px;margin:6px 0 0;line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:3px;margin:6px 0 0}
+.tag{font-size:10px;padding:1px 6px;border-radius:4px;background:#f5f5f4;color:#78716c}
 .landing-card{background:#fffbeb;border-color:#fde68a}
-.trend-item{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid #f5f5f4}
+.trend-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #f5f5f4}
 .trend-item:last-child{border-bottom:none}
-.trend-num{width:24px;height:24px;border-radius:50%;background:#e7e5e4;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#78716c;flex-shrink:0}
-.trend-item p{font-size:13px;color:#57534e;line-height:1.6}
-.footer{text-align:center;padding:24px 0;font-size:12px;color:#a8a29e;line-height:1.8}
+.trend-num{width:22px;height:22px;border-radius:50%;background:#e7e5e4;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#78716c;flex-shrink:0}
+.trend-item p{font-size:13px;color:#44403c;line-height:1.6}
+.footer{text-align:center;padding:20px 0;font-size:11px;color:#a8a29e;line-height:1.8}
 @media(prefers-color-scheme:dark){
 body{background:#1c1917;color:#e7e5e4}
 .card{background:#292524;border-color:#44403c}
 .card:hover{border-color:#78716c}
-.card-title{color:#e7e5e4}
-.card-desc{color:#a8a29e}
+.ct{color:#e7e5e4}
+.cd{color:#a8a29e}
 .headline{background:#451a03;color:#fbbf24}
 .landing-card{background:#451a03;border-color:#92400e}
 .tag{background:#292524;color:#a8a29e}
 .trend-num{background:#44403c;color:#a8a29e}
 .trend-item{border-color:#292524}
 .paper-why{background:#0c4a6e;color:#7dd3fc}
+.paper-title{color:#a8a29e}
 .voice-who{color:#a78bfa}
 }
 </style>
@@ -55,125 +60,61 @@ body{background:#1c1917;color:#e7e5e4}
   <div class="header">
     <div class="date">2026年03月29日 · 星期日</div>
     <h1>AI 日报</h1>
-    <div class="headline">AI 生态持续活跃，多个方向同步推进</div>
+    <div class="headline">AI 生态持续活跃</div>
   </div>
 
-  <div class="section">
-    <div class="section-title">
-      <span class="section-icon" style="background:#dc2626">!</span> 今日必知
-    </div>
-    
-        <a href="https://news.stanford.edu/stories/2026/03/ai-advice-sycophantic-models-research" class="card" target="_blank">
-          <div class="card-head">
-            <span class="card-title">AI overly affirms users asking for personal advice</span>
-            <span class="badge" style="background:#d9770615;color:#d97706">关注</span>
-          </div>
-          <p class="card-desc">Hacker News 热议话题，获得 594 分和 448 条讨论。</p>
-          <span class="card-source">来源：Hacker News</span>
-        </a>
-        <a href="https://twitter.com/BoWang87/status/2037648937453232504" class="card" target="_blank">
-          <div class="card-head">
-            <span class="card-title">Further human + AI + proof assistant work on Knuth's "Claude Cycles" problem</span>
-            <span class="badge" style="background:#d9770615;color:#d97706">关注</span>
-          </div>
-          <p class="card-desc">Hacker News 热议话题，获得 185 分和 122 条讨论。</p>
-          <span class="card-source">来源：Hacker News</span>
-        </a>
-  </div>
-
+  <div class='section'><div class='st'><span class='si' style='background:#dc2626'>!</span>今日必知</div><a href="https://news.stanford.edu/stories/2026/03/ai-advice-sycophantic-models-research" target="_blank" class="card ">
+          <div class="ch"><span class="ct">AI overly affirms users asking for personal advice</span><span class="badge imp-med">关注</span></div>
+          <p class="cd">HN 热议，600分，451条讨论。</p>
+          <span class="cs">来源：HN · <span class="link-hint">点击查看原文 →</span></span>
+        </a><a href="https://www.reuters.com/world/us/iran-linked-hackers-claim-breach-of-fbi-directors-personal-email-doj-official-2026-03-27/" target="_blank" class="card ">
+          <div class="ch"><span class="ct">Iran-linked hackers breach FBI director&#x27;s personal email</span><span class="badge imp-med">关注</span></div>
+          <p class="cd">HN 热议，422分，515条讨论。</p>
+          <span class="cs">来源：HN · <span class="link-hint">点击查看原文 →</span></span>
+        </a><a href="https://twitter.com/BoWang87/status/2037648937453232504" target="_blank" class="card ">
+          <div class="ch"><span class="ct">Further human + AI + proof assistant work on Knuth&#x27;s &quot;Claude Cycles&quot; problem</span><span class="badge imp-med">关注</span></div>
+          <p class="cd">HN 热议，191分，123条讨论。</p>
+          <span class="cs">来源：HN · <span class="link-hint">点击查看原文 →</span></span>
+        </a></div>
   
-
   
-
-  <div class="section">
-    <div class="section-title">
-      <span class="section-icon" style="background:#059669">★</span> 热门开源项目
-    </div>
-    
-        <a href="https://github.com/n8n-io/n8n" class="card" target="_blank">
-          <div class="card-head">
-            <span class="card-title">n8n-io/n8n</span>
-            
-          </div>
-          <p class="card-desc">Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.</p>
-          <div class="card-meta">
-            <span>Star <b>181,533</b></span>
-          </div>
+  <div class='section'><div class='st'><span class='si' style='background:#059669'>&#x2605;</span>热门开源项目</div><a href="https://github.com/n8n-io/n8n" target="_blank" class="card ">
+          <div class="ch"><span class="ct">n8n-io/n8n</span></div>
+          <p class="cd">Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.</p>
+          <div class="cm"><span>★ 181,534</span></div>
           <div class="tags"><span class="tag">ai</span><span class="tag">apis</span><span class="tag">automation</span><span class="tag">cli</span></div>
-        </a>
-        <a href="https://github.com/langchain-ai/langchain" class="card" target="_blank">
-          <div class="card-head">
-            <span class="card-title">langchain-ai/langchain</span>
-            
-          </div>
-          <p class="card-desc">The agent engineering platform</p>
-          <div class="card-meta">
-            <span>Star <b>131,432</b></span>
-          </div>
+        </a><a href="https://github.com/langchain-ai/langchain" target="_blank" class="card ">
+          <div class="ch"><span class="ct">langchain-ai/langchain</span></div>
+          <p class="cd">The agent engineering platform</p>
+          <div class="cm"><span>★ 131,436</span></div>
           <div class="tags"><span class="tag">agents</span><span class="tag">ai</span><span class="tag">ai-agents</span><span class="tag">anthropic</span></div>
-        </a>
-        <a href="https://github.com/affaan-m/everything-claude-code" class="card" target="_blank">
-          <div class="card-head">
-            <span class="card-title">affaan-m/everything-claude-code</span>
-            
-          </div>
-          <p class="card-desc">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</p>
-          <div class="card-meta">
-            <span>Star <b>115,181</b></span>
-          </div>
+        </a><a href="https://github.com/affaan-m/everything-claude-code" target="_blank" class="card ">
+          <div class="ch"><span class="ct">affaan-m/everything-claude-code</span></div>
+          <p class="cd">The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.</p>
+          <div class="cm"><span>★ 115,214</span></div>
           <div class="tags"><span class="tag">ai-agents</span><span class="tag">anthropic</span><span class="tag">claude</span><span class="tag">claude-code</span></div>
-        </a>
-        <a href="https://github.com/google-gemini/gemini-cli" class="card" target="_blank">
-          <div class="card-head">
-            <span class="card-title">google-gemini/gemini-cli</span>
-            
-          </div>
-          <p class="card-desc">An open-source AI agent that brings the power of Gemini directly into your terminal.</p>
-          <div class="card-meta">
-            <span>Star <b>99,381</b></span>
-          </div>
+        </a><a href="https://github.com/google-gemini/gemini-cli" target="_blank" class="card ">
+          <div class="ch"><span class="ct">google-gemini/gemini-cli</span></div>
+          <p class="cd">An open-source AI agent that brings the power of Gemini directly into your terminal.</p>
+          <div class="cm"><span>★ 99,382</span></div>
           <div class="tags"><span class="tag">ai</span><span class="tag">ai-agents</span><span class="tag">cli</span><span class="tag">gemini</span></div>
-        </a>
-        <a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" class="card" target="_blank">
-          <div class="card-head">
-            <span class="card-title">nextlevelbuilder/ui-ux-pro-max-skill</span>
-            
-          </div>
-          <p class="card-desc">An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms</p>
-          <div class="card-meta">
-            <span>Star <b>53,705</b></span>
-          </div>
+        </a><a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" target="_blank" class="card ">
+          <div class="ch"><span class="ct">nextlevelbuilder/ui-ux-pro-max-skill</span></div>
+          <p class="cd">An AI SKILL that provide design intelligence for building professional UI/UX multiple platforms</p>
+          <div class="cm"><span>★ 53,717</span></div>
           <div class="tags"><span class="tag">ai-skills</span><span class="tag">antigravity</span><span class="tag">claude</span><span class="tag">claude-code</span></div>
-        </a>
-  </div>
-
-  <div class='section'><div class='section-title'><span class='section-icon' style="background:#d97706">📡</span> 落地风向标</div>
-        <div class="card landing-card">
-          <div class="card-title">AI 落地应用持续涌现</div>
-          <p class="card-desc">本周多个 AI 项目在实际场景中取得进展，建议关注热门项目的应用案例。</p>
-        </div></div>
-
-  <div class="section">
-    <div class="section-title">
-      <span class="section-icon" style="background:#78716c">→</span> 趋势洞察
-    </div>
-    
-        <div class="trend-item">
-          <span class="trend-num">1</span>
-          <p>Agent 和 Skill 生态持续扩展，垂直化趋势明显。</p>
-        </div>
-        <div class="trend-item">
-          <span class="trend-num">2</span>
-          <p>MCP 协议集成和多 Agent 协作仍是社区热点。</p>
-        </div>
-        <div class="trend-item">
-          <span class="trend-num">3</span>
-          <p>科研自动化和代码辅助工具快速迭代中。</p>
-        </div>
-  </div>
+        </a></div>
+  <div class='section'><div class='st'><span class='si' style='background:#d97706'>&#x1f4e1;</span>落地风向标</div><a href="https://techcrunch.com/2026/03/28/bluesky-leans-into-ai-with-attie-an-app-for-building-custom-feeds/" target="_blank" class="card landing-card">
+          <div class="ct">Bluesky leans into AI with Attie, an app for building custom feeds</div>
+          <p class="cd">Bluesky’s new app Attie uses AI to help people build custom feeds the open social networking protocol atproto.</p>
+        </a><a href="https://techcrunch.com/2026/03/28/stanford-study-outlines-dangers-of-asking-ai-chatbots-for-personal-advice/" target="_blank" class="card landing-card">
+          <div class="ct">Stanford study outlines dangers of asking AI chatbots for personal advice</div>
+          <p class="cd">While there’s been plenty of debate about AI sycophancy, a new study by Stanford computer scientists attempts to measure how harmful that tendency might be.</p>
+        </a></div>
+  <div class='section'><div class='st'><span class='si' style='background:#78716c'>&#x2192;</span>趋势洞察</div><div class="trend-item"><span class="trend-num">1</span><p>Agent/Skill 生态持续扩展。</p></div><div class="trend-item"><span class="trend-num">2</span><p>多模态和推理能力是竞争焦点。</p></div><div class="trend-item"><span class="trend-num">3</span><p>AI 落地应用场景不断拓宽。</p></div></div>
 
   <div class="footer">
-    AI 日报 · 数据来源：GitHub / Hacker News / arXiv<br>
+    AI 日报 · GitHub / HN / arXiv / Reddit / TechCrunch / Product Hunt<br>
     由 DeepSeek + GitHub Actions 自动生成
   </div>
 </div>
