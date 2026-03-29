@@ -21,7 +21,7 @@ AI 日报 v2 —— 每日 AI 信息过滤器
   DEEPSEEK_API_KEY    - DeepSeek API Key（生成中文简介）
   GITHUB_TOKEN        - GitHub Token（提升 API 限额）
   WECOM_WEBHOOK_URL   - 企业微信群机器人 Webhook URL
-  GITHUB_PAGES_URL    - GitHub Pages 地址（如 https://用户名.github.io/agent-daily-report）
+  PAGES_URL    - GitHub Pages 地址（如 https://用户名.github.io/agent-daily-report）
 """
 
 import os
@@ -766,7 +766,7 @@ def main():
     gh_token = os.environ.get("GITHUB_TOKEN")
     deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
     wecom_webhook = os.environ.get("WECOM_WEBHOOK_URL")
-    pages_url = os.environ.get("GITHUB_PAGES_URL", "")
+    pages_url = os.environ.get("PAGES_URL", "")
 
     # 第一步：抓取数据
     log.info("📡 采集 GitHub 热门项目 ...")
